@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project_files.Customer_Controller">
+    <children>
+        <AnchorPane prefHeight="562.0" prefWidth="574.0">
+            <children>
+                <ImageView fitHeight="663.0" fitWidth="720.0" layoutX="-47.0" layoutY="-67.0" pickOnBounds="true">
+                    <image>
+                        <Image url= "@../../../images/background_project.png" />
+                    </image>
+                </ImageView>
+                <TextField fx:id="field1" layoutX="14.0" layoutY="75.0" promptText="Input Name Here" />
+                <TextField fx:id="field2" layoutX="14.0" layoutY="125.0" promptText="Input E-mail Here" />
+                <TextField fx:id="field3" layoutX="14.0" layoutY="172.0" promptText="Input Phone # Here" />
+                <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Information">
+                    <font>
+                        <Font name="Candara" size="33.0" />
+                    </font>
+                </Text>
+                <Text layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                <Text layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail Address" />
+                <Text layoutX="14.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+                <Button layoutX="50.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#LoginButtonClick" text="Submit Info" />
+                <TextField fx:id="prompt_box1" editable="false" layoutX="14.0" layoutY="271.0" prefHeight="31.0" prefWidth="387.0" promptText="Waiting for Login Submission..." scaleShape="false">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </TextField>
+                <Accordion layoutX="14.0" layoutY="341.0">
+                    <panes>
+                        <TitledPane animated="false" text="Foods">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#addSandwich" prefHeight="31.0" prefWidth="78.0" text="Sandwich" />
+                                        <Button layoutX="108.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#addMuffin" prefHeight="31.0" prefWidth="78.0" text="Muffin" />
+                                        <Button layoutX="108.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#addBagel" prefHeight="31.0" prefWidth="78.0" text="Bagel" />
+                                        <Button layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#addDonut" prefHeight="31.0" prefWidth="78.0" text="Donut" />
+                                        <Button layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#addToast" prefHeight="31.0" prefWidth="78.0" text="Toast" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefWidth="202.0" text="Beverages">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#addIcedCoffee" prefHeight="31.0" prefWidth="78.0" text="Iced Coffee" />
+                                        <Button layoutX="108.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#addEspresso" prefHeight="31.0" prefWidth="78.0" text="Espresso" />
+                                        <Button layoutX="14.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#addAmericano" prefHeight="31.0" prefWidth="78.0" text="Americano" />
+                                        <Button layoutX="108.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#addMacchiato" prefHeight="31.0" prefWidth="78.0" text="Macchiato" />
+                                        <Button layoutX="14.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#addLatte" prefHeight="31.0" prefWidth="78.0" text="Latte" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+                <TextArea fx:id="result" editable="false" layoutX="415.0" layoutY="8.0" prefHeight="294.0" prefWidth="240.0">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </TextArea>
+                <TextField fx:id="cc_field" layoutX="241.0" layoutY="375.0" promptText="Enter CC # Here" />
+                <Text layoutX="237.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Information">
+                    <font>
+                        <Font name="Candara" size="22.0" />
+                    </font>
+                </Text>
+                <Text layoutX="241.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card Number" />
+                <Button layoutX="241.0" layoutY="482.0" mnemonicParsing="false" onMouseClicked="#checkout" prefHeight="50.0" prefWidth="149.0" text="Checkout" />
+                <Accordion layoutX="450.0" layoutY="341.0">
+                    <panes>
+                        <TitledPane animated="false" text="Foods">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#getSandwich" prefHeight="31.0" prefWidth="78.0" text="Sandwich" />
+                                        <Button layoutX="108.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#getMuffin" prefHeight="31.0" prefWidth="78.0" text="Muffin" />
+                                        <Button layoutX="108.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#getBagel" prefHeight="31.0" prefWidth="78.0" text="Bagel" />
+                                        <Button layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#getDonut" prefHeight="31.0" prefWidth="78.0" text="Donut" />
+                                        <Button layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#getToast" prefHeight="31.0" prefWidth="78.0" text="Toast" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Beverages">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#getIcedCoffee" prefHeight="31.0" prefWidth="78.0" text="Iced Coffee" />
+                                        <Button layoutX="108.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#getEspresso" prefHeight="31.0" prefWidth="78.0" text="Espresso" />
+                                        <Button layoutX="14.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#getAmericano" prefHeight="31.0" prefWidth="78.0" text="Americano" />
+                                        <Button layoutX="108.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#getMacchiato" prefHeight="31.0" prefWidth="78.0" text="Macchiato" />
+                                        <Button layoutX="14.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#getLatte" prefHeight="31.0" prefWidth="78.0" text="Latte" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+                <Text layoutX="479.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients List">
+                    <font>
+                        <Font name="Candara" size="22.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tip_field" layoutX="241.0" layoutY="426.0" promptText="Add a tip?" />
+                <Text layoutX="241.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tip" />
+            </children>
+        </AnchorPane>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="543.0" prefWidth="642.0" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>
